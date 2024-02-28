@@ -24,7 +24,7 @@ export function Signin() {
             const date= new Date();
             date.setDate(date.getDate() + 30);
             setCookie("token", token , {path : "/api/v1/user/signin" , expires : date});
-            navigate("/blog/:id");
+            navigate("/home");
         }else{
             alert("Wrong credentials!!!");
         }

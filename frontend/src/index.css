@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: Barcelony;
+    src: url("assets/fonts/Barcelony.ttf") format("opentype");
+  }
