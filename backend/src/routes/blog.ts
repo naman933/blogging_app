@@ -95,16 +95,16 @@ blogRoutes.put('/', async (c) => {
     }
 })
 
-blogRoutes.get('/:id', async (c) => {
-    const id = c.req.param('id');
+blogRoutes.get('/posts', async (c) => {
+    const userId = c.get('userId');
     const prisma = new PrismaClient({
         datasourceUrl: c.env.DATABASE_URL,
       }).$extends(withAccelerate())
 
     try{
-        const post = await prisma.post.findUnique({
+        const post = await prisma.post.findMany({
             where : {
-                id 
+                authorId : userId
             }
         });
         return c.json(post);
@@ -115,5 +115,27 @@ blogRoutes.get('/:id', async (c) => {
     
 })
 
+blogRoutes.get('/allposts', async (c) => {
+    const userId = c.get('userId');
+    const prisma = new PrismaClient({
+        datasourceUrl: c.env.DATABASE_URL,
+      }).$extends(withAccelerate())
+
+    try{
+        const post = await prisma.post.findMany({
+            where : {
+                authorId : {
+                    not : userId
+                },
+                published : true,
+            }
+        });
+        return c.json(post);
+    }catch(e){
+        c.status(401);
+        return c.json({error : "Post not found!!!"})
+    }
+    
+})
 
 export default blogRoutes;

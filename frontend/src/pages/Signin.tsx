@@ -23,7 +23,7 @@ export function Signin() {
             const token = response.data.jwt;
             const date= new Date();
             date.setDate(date.getDate() + 30);
-            setCookie("token", token , {path : "/api/v1/user/signin" , expires : date});
+            setCookie("token", token , {path : "/" , expires : date});
             navigate("/home");
         }else{
             alert("Wrong credentials!!!");
