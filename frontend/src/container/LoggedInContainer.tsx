@@ -10,7 +10,7 @@ export const LoggedInContainer = ({children, currActiveScreen}) => {
         navigate("/home");
     };
     return (
-        <div className="h-full w-full overflow-auto bg-amber-300">
+        <div className="h-full w-full overflow-auto bg-amber-400">
             <div className="h-1/10 w-full flex justify-between p-10">
                 <div className="text-4xl tracking-wide font-barcelony">
                     BlogVista

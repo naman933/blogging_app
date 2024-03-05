@@ -33,10 +33,10 @@ export function Signup () {
     }
 
     return (
-            <div className="flex flex-col w-full h-full justify-center items-center ">
-                <div className="flex flex-col items-center justify-center border-2 p-8 rounded-xl">
-                    <div className="text-3xl font-bold">Sign Up</div>
-                    <div className="my-2 text-gray-500">Enter your information to create an account</div>
+            <div className="flex flex-col w-full h-full justify-center items-center bg-amber-400">
+                <div className="flex flex-col items-center justify-center border-2 p-8 rounded-xl bg-white">
+                    <div className="text-3xl font-bold font-barcelony">Sign Up</div>
+                    <div className="my-2 text-gray-500 font-mono">Enter your information to create an account</div>
                     <TextInput label="Name" placeholder="John Doe" className="my-2" value={name} setValue={setName}/>
                     <TextInput label="Username" placeholder="johndoe@example.com" className="my-2 mb-4" value={email} setValue={setEmail}/>
                     <PasswordInput label="Password" placeholder="" value={password} setValue={setPassword} />

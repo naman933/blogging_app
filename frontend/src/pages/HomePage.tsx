@@ -49,7 +49,7 @@ export const HomePage = () => {
                 <TextInputArea label="Content" placeholder="Your thoughts...." value={content} setValue={setContent} className="w-full h-48 text-start resize-none p-2 m-0"></TextInputArea>
             </div>
             <div className="w-full items-center flex justify-center">
-                <button className="items-center border-2 rounded-xl bg-orange-400 hover:text-white p-2 text-lg font-mono" onClick={(e) => {e.preventDefault(); submitContent();}}>Submit Your Story Space</button>
+                <button className="items-center border-2 rounded-xl bg-orange-400 hover:text-white p-2 text-lg font-mono" onClick={(e) => {e.preventDefault(); submitContent();}}>Publish</button>
             </div>
             {status ? (<div className="flex items-center justify-center font-barcelony text-2xl p-5"> Done !!</div>) : (<div></div>)}
         </LoggedInContainer>

@@ -8,6 +8,9 @@ export default {
     extend: {
       fontFamily: {
         barcelony: "Barcelony",
+        persona : "Fountain_Persona",
+        winter : "Winter",
+        catboo : "CatBoo"
       },
     },
   },

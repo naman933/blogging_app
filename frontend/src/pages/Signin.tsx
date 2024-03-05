@@ -32,10 +32,10 @@ export function Signin() {
     }
 
     return(
-            <div className="flex flex-col w-full h-full justify-center items-center ">
-                <div className="flex flex-col items-center justify-center border-2 p-8 rounded-xl">
-                    <div className="text-3xl font-bold">Sign In</div>
-                    <div className="my-2 text-gray-500">Enter your credentials to access your account</div>
+            <div className="flex flex-col w-full h-full justify-center items-center bg-amber-400 ">
+                <div className="flex flex-col items-center justify-center border-2 p-8 rounded-xl bg-white">
+                    <div className="text-3xl font-bold font-barcelony">Sign In</div>
+                    <div className="my-2 text-gray-500 font-mono">Enter your credentials to access your account</div>
                     <TextInput label="Username" placeholder="johndoe@example.com" className="my-2 mb-4" value={email} setValue={setEmail}/>
                     <PasswordInput label="Password" placeholder="" value={password} setValue={setPassword} />
                     <div className="w-full flex items-center justify-end my-4">

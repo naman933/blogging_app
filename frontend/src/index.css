@@ -5,4 +5,16 @@
 @font-face {
     font-family: Barcelony;
     src: url("assets/fonts/Barcelony.ttf") format("opentype");
-  }
+}
+@font-face {
+  font-family: Fountain_Persona;
+  src: url("assets/fonts/Fountain_Persona.ttf") format("opentype");
+}
+@font-face {
+  font-family: Winter;
+  src: url("assets/fonts/Winter.otf") format("opentype");
+}
+@font-face {
+  font-family: CatBoo;
+  src: url("assets/fonts/Catboo.ttf") format("opentype");
+}
