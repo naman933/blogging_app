@@ -126,8 +126,7 @@ blogRoutes.get('/allposts', async (c) => {
             where : {
                 authorId : {
                     not : userId
-                },
-                published : true,
+                }
             }
         });
         return c.json(post);
